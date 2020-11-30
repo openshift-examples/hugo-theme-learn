@@ -413,7 +413,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     right: 0;
 }
 #body-inner {
-    margin-bottom: 5rem;
+    /* margin-bottom: 5rem; */
 }
 #chapter {
     display: flex;
@@ -462,11 +462,20 @@ h2, h3, h4, h5, h6 {
 }
 h1 {
     font-family: "Novacento Sans Wide", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
-    text-align: center;
-    text-transform: uppercase;
+    /* text-align: center; */
+    /* text-transform: uppercase; */
     color: #222;
     font-weight: 200;
+    border-bottom: 2px dotted #F6F6F6;
 }
+
+h1.title {
+    font-weight: 900;
+    text-transform: uppercase;
+    border-bottom: 5px solid #F6F6F6;
+}
+}
+
 blockquote {
     border-left: 10px solid #F0F2F4;
 }
