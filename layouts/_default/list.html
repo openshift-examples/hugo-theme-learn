@@ -17,6 +17,10 @@
 	    <i class='fas fa-user'></i> <a href="mailto:{{ $.Params.LastModifierEmail }}">{{ . }}</a> {{with $.Date}} <i class='fas fa-calendar'></i> {{ .Format "02/01/2006" }}{{end}}
 	    </div>
 	{{end}}
+	{{with .GitInfo }}
+	<i class='fas fa-calendar'></i> Last modified {{ .AuthorDate }}: <a  href="{{ $.Site.Params.github_repo }}/commit/{{ .Hash }}">{{ .Subject }} ({{ .AbbreviatedHash }})</a>
+	by <i class='fas fa-user'></i> <a href="mailto:{{ .AuthorEmail }}">{{ .AuthorName }}</a>
+	{{end}}
 </footer>
 
 {{ partial "footer.html" . }}
